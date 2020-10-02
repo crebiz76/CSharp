@@ -4,7 +4,7 @@ class ReadLine
 {
     static void Main(string[] args)
     {
-#if debug1
+#if debug
         // Console.WriteLine(Console.ReadLine());
         
         System.Console.Write("이름: ______\b\b\b\b\b\b");
