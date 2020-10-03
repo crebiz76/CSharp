@@ -58,36 +58,6 @@ namespace Enum
                     System.Console.WriteLine("Select again!");
                     break;
             }
-            
-
-            // switch(animal)
-            // {
-            //     case Animal.Pig:
-            //         System.Console.WriteLine("도!");
-            //     case Animal.Dog:
-            //         System.Console.WriteLine("개!");
-            //     case Animal.Sheep:
-            //         System.Console.WriteLine("걸!");
-            //     case Animal.Cow:
-            //         System.Console.WriteLine("윷!");
-            //     case Animal.Horse:
-            //         System.Console.WriteLine("모!");
-            //     default:
-            //         System.Console.WriteLine("Select again!");
-            //     break;
-            // }
-
-            
-            // System.Console.WriteLine(Animal.Dog);
-            // System.Console.WriteLine(Convert.ToInt32(Animal.Dog));
-            // System.Console.WriteLine(animal);
-            // System.Console.WriteLine(Convert.ToInt32(animal));
-
-
-            // System.Console.WriteLine($"Name:{nameof(animal)}, Value:{(int)dog}");
-            // System.Console.WriteLine($"Name:{nameof(dog)}, Value:{(int)dog}");
-            // System.Console.WriteLine($"Name:{nameof(dog)}, Value:{(int)dog}");
-            // System.Console.WriteLine($"Name:{nameof(dog)}, Value:{(int)dog}");
         }
     }
 }
