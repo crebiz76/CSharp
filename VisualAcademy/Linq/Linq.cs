@@ -28,29 +28,32 @@ namespace Linq
             list = numbers.Where(n => n%2 != 0).ToList();
             for (int j = 0; j < list.Count; j++) System.Console.WriteLine(list[j]);      
 
-            //
+            // 
+            System.Console.WriteLine("[List]");
             List<string> techs = new List<string>();
             techs.Add("C#");
             techs.Add("ASP.NET");
             techs.Add("Blazor");
             techs.OrderBy(t => t);
             for (int k = 0; k < techs.Count; k++) System.Console.WriteLine(techs[k]);
-            // List<string> arts = new List<string>();
-            // arts = techs.OrderBy(t => t);
-            // for (int l = 0; l < arts.Count; l++) System.Console.WriteLine(arts[l]);
+            
+            System.Console.WriteLine("[List - OrderBy]");
+            IEnumerable<string> arts = techs.OrderBy(t => t);
+            foreach(var art in arts) System.Console.WriteLine(art);
             
             var integers = Enumerable.Range(1, 100);
             int sumOfInt = integers.Where(i => i%2 == 0).Sum();
             System.Console.WriteLine(sumOfInt);
-            // List<int> listOfInt = new List<int>();
-            // listOfInt = integers.OrderByDescending(i => i).Where(x => x% 2 == 0).Take(3);
-            // for (int m = 0; m < listOfInt.Count; m++) System.Console.WriteLine(listOfInt);
 
-            // var q = from n in integers
-            //         where n % 2 == 0
-            //         select n;
-
-            // for (int n = 0; n < 50; n++) System.Console.WriteLine($"{q[n]}\t");
+            System.Console.WriteLine("[List - WhereToList]");
+            IEnumerable<int> listOfInts = integers.OrderByDescending(i => i).Where(x => x% 2 == 0).Take(3);
+            foreach (var listOfInt in listOfInts) System.Console.WriteLine(listOfInt);
+            
+            System.Console.WriteLine("[Query type]");
+            var querys = from n in integers
+                    where n % 5 == 0
+                    select n;
+            foreach(var query in querys) System.Console.WriteLine(query);
         }
     }
 }
