@@ -23,5 +23,17 @@ class MinAlgorithm
         // [4] Output
         System.Console.WriteLine($"최대값(문): {min}");
         System.Console.WriteLine($"최대값(식): {numbers.Min()}");
+
+        // 짝수 최소값 구하기
+        min = Int32.MaxValue;
+        for(int i = 0; i < numbers.Length; i++)
+        {
+            if((min > numbers[i]) && (numbers[i] % 2 ==0))
+            {
+                min = numbers[i];
+            }
+        }
+        System.Console.WriteLine($"최대값(문): {min}");
+        System.Console.WriteLine($"최대값(식): {numbers.Where(n => n % 2 == 0).Min()}");
     }
 }
