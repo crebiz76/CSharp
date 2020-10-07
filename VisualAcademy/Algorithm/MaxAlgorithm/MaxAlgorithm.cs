@@ -14,7 +14,7 @@ class MaxAlgorithm
         // [3] Process
         for(int i = 0; i < numbers.Length; i++)
         {
-            if(numbers[i] > max)
+            if(max < numbers[i])
             {
                 max = numbers[i];
             }
